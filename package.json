@@ -1,0 +1,21 @@
+{
+  "name": "advent-of-code-2018",
+  "version": "1.0.0",
+  "description": "Advent Of Code 2018",
+  "main": "index.html",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pawelrutkowski/adventofcode-2018.git"
+  },
+  "author": "pawelrutkowski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pawelrutkowski/adventofcode-2018/issues"
+  },
+  "homepage": "https://github.com/pawelrutkowski/adventofcode-2018#readme",
+  "devDependencies": {
+    "eslint": "^5.10.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0"
+  }
+}
