@@ -87,12 +87,12 @@ const props = {
   exercises: [
     {
       name: "01",
-      dataPath: "/data/data02.txt",
+      dataPath: "./data/data02.txt",
       code: part01
     },
     {
       name: "02",
-      dataPath: "/data/data02.txt",
+      dataPath: "./data/data02.txt",
       code: part02
     }
   ]

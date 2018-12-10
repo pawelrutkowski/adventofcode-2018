@@ -39,12 +39,12 @@ const props = {
   exercises: [
     {
       name: "01",
-      dataPath: "/data/data01.txt",
+      dataPath: "./data/data01.txt",
       code: part01
     },
     {
       name: "02",
-      dataPath: "/data/data01.txt",
+      dataPath: "./data/data01.txt",
       code: part02
     }
   ]

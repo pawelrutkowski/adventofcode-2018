@@ -11,12 +11,12 @@
   "bugs": {
     "url": "https://github.com/pawelrutkowski/adventofcode-2018/issues"
   },
-  "homepage": "https://pawelrutkowski.github.io/adventofcode-2018/",
+  "homepage": "https://pawelrutkowski.github.io/adventofcode-2018",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && cp build/index.html build/404.html",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
