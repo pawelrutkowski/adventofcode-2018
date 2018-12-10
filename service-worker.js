@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/pawelrutkowski/adventofcode-2018/precache-manifest.65d185ef4479eeca88e32d28ac771309.js"
+  "/adventofcode-2018/precache-manifest.054451e0d68caec919ed1c9fd546c497.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/pawelrutkowski/adventofcode-2018/index.html", {
+workbox.routing.registerNavigationRoute("/adventofcode-2018/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });

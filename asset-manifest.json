@@ -1,11 +1,11 @@
 {
-  "main.js": "/pawelrutkowski/adventofcode-2018/static/js/main.5058507f.chunk.js",
-  "main.js.map": "/pawelrutkowski/adventofcode-2018/static/js/main.5058507f.chunk.js.map",
-  "static/js/1.496c068e.chunk.js": "/pawelrutkowski/adventofcode-2018/static/js/1.496c068e.chunk.js",
-  "static/js/1.496c068e.chunk.js.map": "/pawelrutkowski/adventofcode-2018/static/js/1.496c068e.chunk.js.map",
-  "runtime~main.js": "/pawelrutkowski/adventofcode-2018/static/js/runtime~main.eed0c58b.js",
-  "runtime~main.js.map": "/pawelrutkowski/adventofcode-2018/static/js/runtime~main.eed0c58b.js.map",
-  "index.html": "/pawelrutkowski/adventofcode-2018/index.html",
-  "precache-manifest.65d185ef4479eeca88e32d28ac771309.js": "/pawelrutkowski/adventofcode-2018/precache-manifest.65d185ef4479eeca88e32d28ac771309.js",
-  "service-worker.js": "/pawelrutkowski/adventofcode-2018/service-worker.js"
+  "main.js": "/adventofcode-2018/static/js/main.ff96c08a.chunk.js",
+  "main.js.map": "/adventofcode-2018/static/js/main.ff96c08a.chunk.js.map",
+  "static/js/1.496c068e.chunk.js": "/adventofcode-2018/static/js/1.496c068e.chunk.js",
+  "static/js/1.496c068e.chunk.js.map": "/adventofcode-2018/static/js/1.496c068e.chunk.js.map",
+  "runtime~main.js": "/adventofcode-2018/static/js/runtime~main.8cb92343.js",
+  "runtime~main.js.map": "/adventofcode-2018/static/js/runtime~main.8cb92343.js.map",
+  "index.html": "/adventofcode-2018/index.html",
+  "precache-manifest.054451e0d68caec919ed1c9fd546c497.js": "/adventofcode-2018/precache-manifest.054451e0d68caec919ed1c9fd546c497.js",
+  "service-worker.js": "/adventofcode-2018/service-worker.js"
 }
