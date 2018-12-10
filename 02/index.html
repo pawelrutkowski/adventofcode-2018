@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>#02</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <input type="file" id="input_data" name="input_data" accept="txt">
+    <p>Result 1:</p>
+    <p id='result'></p>
+    <p>Result 2:</p>
+    <p id='result2'></p>
+    <p>Script:</p>
+    <pre style='color:#000000;background:#ffffff;'><span style='color:#800000; font-weight:bold; '>const</span> countCharacters <span style='color:#808030; '>=</span> <span style='color:#808030; '>(</span>value<span style='color:#808030; '>)</span> <span style='color:#808030; '>=</span><span style='color:#808030; '>></span> <span style='color:#800080; '>{</span>
+      <span style='color:#800000; font-weight:bold; '>const</span> object <span style='color:#808030; '>=</span> <span style='color:#800080; '>{</span><span style='color:#800080; '>}</span><span style='color:#800080; '>;</span>
+      <span style='color:#800000; font-weight:bold; '>for</span> <span style='color:#808030; '>(</span><span style='color:#800000; font-weight:bold; '>let</span> <span style='color:#797997; '>index</span> <span style='color:#808030; '>=</span> <span style='color:#008c00; '>0</span><span style='color:#800080; '>;</span> <span style='color:#797997; '>index</span> <span style='color:#808030; '>&lt;</span> value<span style='color:#808030; '>.</span><span style='color:#800000; font-weight:bold; '>length</span><span style='color:#800080; '>;</span> <span style='color:#797997; '>index</span><span style='color:#808030; '>++</span><span style='color:#808030; '>)</span> <span style='color:#800080; '>{</span>
+        <span style='color:#800000; font-weight:bold; '>const</span> character <span style='color:#808030; '>=</span> value<span style='color:#808030; '>[</span><span style='color:#797997; '>index</span><span style='color:#808030; '>]</span><span style='color:#800080; '>;</span>
+        <span style='color:#800000; font-weight:bold; '>if</span> <span style='color:#808030; '>(</span>object<span style='color:#808030; '>[</span>character<span style='color:#808030; '>]</span> <span style='color:#808030; '>===</span> <span style='color:#0f4d75; '>undefined</span><span style='color:#808030; '>)</span> <span style='color:#800080; '>{</span>
+          object<span style='color:#808030; '>[</span>character<span style='color:#808030; '>]</span> <span style='color:#808030; '>=</span> <span style='color:#008c00; '>1</span><span style='color:#800080; '>;</span>
+        <span style='color:#800080; '>}</span> <span style='color:#800000; font-weight:bold; '>else</span> <span style='color:#800080; '>{</span>
+          object<span style='color:#808030; '>[</span>character<span style='color:#808030; '>]</span> <span style='color:#808030; '>+=</span> <span style='color:#008c00; '>1</span><span style='color:#800080; '>;</span>
+        <span style='color:#800080; '>}</span>
+      <span style='color:#800080; '>}</span>
+      <span style='color:#800000; font-weight:bold; '>return</span> <span style='color:#808030; '>[</span><span style='color:#808030; '>.</span><span style='color:#808030; '>.</span><span style='color:#808030; '>.</span><span style='color:#800000; font-weight:bold; '>new</span> Set<span style='color:#808030; '>(</span><span style='color:#797997; '>Object</span><span style='color:#808030; '>.</span>values<span style='color:#808030; '>(</span>object<span style='color:#808030; '>)</span><span style='color:#808030; '>)</span><span style='color:#808030; '>]</span><span style='color:#800080; '>;</span>
+    <span style='color:#800080; '>}</span><span style='color:#800080; '>;</span>
+    
+    <span style='color:#800000; font-weight:bold; '>const</span> multiply <span style='color:#808030; '>=</span> <span style='color:#808030; '>(</span>prev<span style='color:#808030; '>,</span> next<span style='color:#808030; '>)</span> <span style='color:#808030; '>=</span><span style='color:#808030; '>></span> prev <span style='color:#808030; '>*</span> next<span style='color:#800080; '>;</span>
+    
+    <span style='color:#800000; font-weight:bold; '>const</span> getResultPart1 <span style='color:#808030; '>=</span> <span style='color:#808030; '>(</span><span style='color:#797997; '>input</span><span style='color:#808030; '>)</span> <span style='color:#808030; '>=</span><span style='color:#808030; '>></span> <span style='color:#800080; '>{</span>
+      <span style='color:#800000; font-weight:bold; '>const</span> countedCharacters <span style='color:#808030; '>=</span> <span style='color:#797997; '>input</span><span style='color:#808030; '>.</span>map<span style='color:#808030; '>(</span>countCharacters<span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+      <span style='color:#800000; font-weight:bold; '>const</span> <span style='color:#800000; font-weight:bold; '>test</span> <span style='color:#808030; '>=</span> <span style='color:#800080; '>{</span><span style='color:#800080; '>}</span><span style='color:#800080; '>;</span>
+      <span style='color:#800000; font-weight:bold; '>const</span> sumOfCounters <span style='color:#808030; '>=</span> <span style='color:#808030; '>(</span>prev<span style='color:#808030; '>,</span> next<span style='color:#808030; '>)</span> <span style='color:#808030; '>=</span><span style='color:#808030; '>></span> <span style='color:#800080; '>{</span>
+        <span style='color:#800000; font-weight:bold; '>const</span> tmp <span style='color:#808030; '>=</span> prev<span style='color:#800080; '>;</span>
+        next<span style='color:#808030; '>.</span>forEach<span style='color:#808030; '>(</span><span style='color:#808030; '>(</span>element<span style='color:#808030; '>)</span> <span style='color:#808030; '>=</span><span style='color:#808030; '>></span> <span style='color:#800080; '>{</span>
+          <span style='color:#800000; font-weight:bold; '>const</span> asdasdasd <span style='color:#808030; '>=</span> `<span style='color:#800000; font-weight:bold; '>test</span>$<span style='color:#800080; '>{</span>element<span style='color:#800080; '>}</span>`<span style='color:#800080; '>;</span>
+          <span style='color:#800000; font-weight:bold; '>if</span> <span style='color:#808030; '>(</span>tmp<span style='color:#808030; '>[</span>asdasdasd<span style='color:#808030; '>]</span> <span style='color:#808030; '>===</span> <span style='color:#0f4d75; '>undefined</span><span style='color:#808030; '>)</span> <span style='color:#800080; '>{</span>
+            tmp<span style='color:#808030; '>[</span>asdasdasd<span style='color:#808030; '>]</span> <span style='color:#808030; '>=</span> <span style='color:#008c00; '>1</span><span style='color:#800080; '>;</span>
+          <span style='color:#800080; '>}</span> <span style='color:#800000; font-weight:bold; '>else</span> <span style='color:#800080; '>{</span>
+            tmp<span style='color:#808030; '>[</span>asdasdasd<span style='color:#808030; '>]</span> <span style='color:#808030; '>+=</span> <span style='color:#008c00; '>1</span><span style='color:#800080; '>;</span>
+          <span style='color:#800080; '>}</span>
+        <span style='color:#800080; '>}</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+        <span style='color:#800000; font-weight:bold; '>return</span> <span style='color:#800000; font-weight:bold; '>test</span><span style='color:#800080; '>;</span>
+      <span style='color:#800080; '>}</span><span style='color:#800080; '>;</span>
+      <span style='color:#800000; font-weight:bold; '>const</span> result <span style='color:#808030; '>=</span> countedCharacters<span style='color:#808030; '>.</span>reduce<span style='color:#808030; '>(</span>sumOfCounters<span style='color:#808030; '>,</span> <span style='color:#800000; font-weight:bold; '>test</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+    
+      <span style='color:#800000; font-weight:bold; '>delete</span> result<span style='color:#808030; '>.</span>test1<span style='color:#800080; '>;</span>
+    
+      <span style='color:#800000; font-weight:bold; '>return</span> <span style='color:#797997; '>Object</span><span style='color:#808030; '>.</span>values<span style='color:#808030; '>(</span>result<span style='color:#808030; '>)</span><span style='color:#808030; '>.</span>reduce<span style='color:#808030; '>(</span>multiply<span style='color:#808030; '>,</span> <span style='color:#008c00; '>1</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+    <span style='color:#800080; '>}</span><span style='color:#800080; '>;</span>
+    
+    <span style='color:#800000; font-weight:bold; '>const</span> countDiff <span style='color:#808030; '>=</span> <span style='color:#808030; '>(</span>element1<span style='color:#808030; '>,</span> element2<span style='color:#808030; '>)</span> <span style='color:#808030; '>=</span><span style='color:#808030; '>></span> <span style='color:#800080; '>{</span>
+      <span style='color:#800000; font-weight:bold; '>const</span> e1 <span style='color:#808030; '>=</span> element1<span style='color:#808030; '>.</span><span style='color:#800000; font-weight:bold; '>split</span><span style='color:#808030; '>(</span><span style='color:#800000; '>'</span><span style='color:#800000; '>'</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+      <span style='color:#800000; font-weight:bold; '>const</span> e2 <span style='color:#808030; '>=</span> element2<span style='color:#808030; '>.</span><span style='color:#800000; font-weight:bold; '>split</span><span style='color:#808030; '>(</span><span style='color:#800000; '>'</span><span style='color:#800000; '>'</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+      <span style='color:#800000; font-weight:bold; '>let</span> count <span style='color:#808030; '>=</span> <span style='color:#008c00; '>0</span><span style='color:#800080; '>;</span>
+      <span style='color:#800000; font-weight:bold; '>for</span> <span style='color:#808030; '>(</span><span style='color:#800000; font-weight:bold; '>let</span> <span style='color:#797997; '>index</span> <span style='color:#808030; '>=</span> <span style='color:#008c00; '>0</span><span style='color:#800080; '>;</span> <span style='color:#797997; '>index</span> <span style='color:#808030; '>&lt;</span> e1<span style='color:#808030; '>.</span><span style='color:#800000; font-weight:bold; '>length</span><span style='color:#800080; '>;</span> <span style='color:#797997; '>index</span><span style='color:#808030; '>++</span><span style='color:#808030; '>)</span> <span style='color:#800080; '>{</span>
+        <span style='color:#800000; font-weight:bold; '>if</span> <span style='color:#808030; '>(</span>e1<span style='color:#808030; '>[</span><span style='color:#797997; '>index</span><span style='color:#808030; '>]</span> <span style='color:#808030; '>!==</span> e2<span style='color:#808030; '>[</span><span style='color:#797997; '>index</span><span style='color:#808030; '>]</span><span style='color:#808030; '>)</span> <span style='color:#800080; '>{</span>
+          count <span style='color:#808030; '>+=</span> <span style='color:#008c00; '>1</span><span style='color:#800080; '>;</span>
+          <span style='color:#800000; font-weight:bold; '>if</span> <span style='color:#808030; '>(</span>count <span style='color:#808030; '>></span> <span style='color:#008c00; '>2</span><span style='color:#808030; '>)</span> <span style='color:#800080; '>{</span>
+            <span style='color:#800000; font-weight:bold; '>return</span> <span style='color:#800080; '>{</span> count<span style='color:#800080; '>:</span> <span style='color:#008c00; '>2</span> <span style='color:#800080; '>}</span><span style='color:#800080; '>;</span>
+          <span style='color:#800080; '>}</span>
+        <span style='color:#800080; '>}</span>
+      <span style='color:#800080; '>}</span>
+      <span style='color:#800000; font-weight:bold; '>return</span> <span style='color:#800080; '>{</span> count<span style='color:#808030; '>,</span> e1<span style='color:#808030; '>,</span> e2 <span style='color:#800080; '>}</span><span style='color:#800080; '>;</span>
+    <span style='color:#800080; '>}</span><span style='color:#800080; '>;</span>
+    
+    <span style='color:#800000; font-weight:bold; '>const</span> removeDiff <span style='color:#808030; '>=</span> <span style='color:#808030; '>(</span>e1<span style='color:#808030; '>,</span> e2<span style='color:#808030; '>)</span> <span style='color:#808030; '>=</span><span style='color:#808030; '>></span> <span style='color:#800080; '>{</span>
+      <span style='color:#800000; font-weight:bold; '>const</span> result <span style='color:#808030; '>=</span> <span style='color:#808030; '>[</span><span style='color:#808030; '>]</span><span style='color:#800080; '>;</span>
+      <span style='color:#800000; font-weight:bold; '>for</span> <span style='color:#808030; '>(</span><span style='color:#800000; font-weight:bold; '>let</span> <span style='color:#797997; '>index</span> <span style='color:#808030; '>=</span> <span style='color:#008c00; '>0</span><span style='color:#800080; '>;</span> <span style='color:#797997; '>index</span> <span style='color:#808030; '>&lt;</span> e1<span style='color:#808030; '>.</span><span style='color:#800000; font-weight:bold; '>length</span><span style='color:#800080; '>;</span> <span style='color:#797997; '>index</span><span style='color:#808030; '>++</span><span style='color:#808030; '>)</span> <span style='color:#800080; '>{</span>
+        <span style='color:#800000; font-weight:bold; '>if</span> <span style='color:#808030; '>(</span>e1<span style='color:#808030; '>[</span><span style='color:#797997; '>index</span><span style='color:#808030; '>]</span> <span style='color:#808030; '>===</span> e2<span style='color:#808030; '>[</span><span style='color:#797997; '>index</span><span style='color:#808030; '>]</span><span style='color:#808030; '>)</span> <span style='color:#800080; '>{</span>
+          result<span style='color:#808030; '>.</span>push<span style='color:#808030; '>(</span>e1<span style='color:#808030; '>[</span><span style='color:#797997; '>index</span><span style='color:#808030; '>]</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+        <span style='color:#800080; '>}</span>
+      <span style='color:#800080; '>}</span>
+      <span style='color:#800000; font-weight:bold; '>return</span> result<span style='color:#800080; '>;</span>
+    <span style='color:#800080; '>}</span><span style='color:#800080; '>;</span>
+    
+    
+    <span style='color:#800000; font-weight:bold; '>const</span> getResultPart2 <span style='color:#808030; '>=</span> <span style='color:#808030; '>(</span><span style='color:#797997; '>input</span><span style='color:#808030; '>)</span> <span style='color:#808030; '>=</span><span style='color:#808030; '>></span> <span style='color:#800080; '>{</span>
+      <span style='color:#800000; font-weight:bold; '>const</span> inputLength <span style='color:#808030; '>=</span> <span style='color:#797997; '>input</span><span style='color:#808030; '>.</span><span style='color:#800000; font-weight:bold; '>length</span><span style='color:#800080; '>;</span>
+      <span style='color:#800000; font-weight:bold; '>for</span> <span style='color:#808030; '>(</span><span style='color:#800000; font-weight:bold; '>let</span> index1 <span style='color:#808030; '>=</span> <span style='color:#008c00; '>0</span><span style='color:#800080; '>;</span> index1 <span style='color:#808030; '>&lt;</span> inputLength <span style='color:#808030; '>-</span> <span style='color:#008c00; '>1</span><span style='color:#800080; '>;</span> index1<span style='color:#808030; '>++</span><span style='color:#808030; '>)</span> <span style='color:#800080; '>{</span>
+        <span style='color:#800000; font-weight:bold; '>const</span> element1 <span style='color:#808030; '>=</span> <span style='color:#797997; '>input</span><span style='color:#808030; '>[</span>index1<span style='color:#808030; '>]</span><span style='color:#800080; '>;</span>
+        <span style='color:#800000; font-weight:bold; '>for</span> <span style='color:#808030; '>(</span><span style='color:#800000; font-weight:bold; '>let</span> index2 <span style='color:#808030; '>=</span> index1 <span style='color:#808030; '>+</span> <span style='color:#008c00; '>1</span><span style='color:#800080; '>;</span> index2 <span style='color:#808030; '>&lt;</span> inputLength<span style='color:#800080; '>;</span> index2<span style='color:#808030; '>++</span><span style='color:#808030; '>)</span> <span style='color:#800080; '>{</span>
+          <span style='color:#800000; font-weight:bold; '>const</span> element2 <span style='color:#808030; '>=</span> <span style='color:#797997; '>input</span><span style='color:#808030; '>[</span>index2<span style='color:#808030; '>]</span><span style='color:#800080; '>;</span>
+          <span style='color:#800000; font-weight:bold; '>const</span> <span style='color:#800080; '>{</span> count<span style='color:#808030; '>,</span> e1<span style='color:#808030; '>,</span> e2 <span style='color:#800080; '>}</span> <span style='color:#808030; '>=</span> countDiff<span style='color:#808030; '>(</span>element1<span style='color:#808030; '>,</span> element2<span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+          <span style='color:#800000; font-weight:bold; '>if</span> <span style='color:#808030; '>(</span>count <span style='color:#808030; '>&lt;</span> <span style='color:#008c00; '>2</span><span style='color:#808030; '>)</span> <span style='color:#800080; '>{</span>
+            <span style='color:#800000; font-weight:bold; '>return</span> removeDiff<span style='color:#808030; '>(</span>e1<span style='color:#808030; '>,</span> e2<span style='color:#808030; '>)</span><span style='color:#808030; '>.</span><span style='color:#800000; font-weight:bold; '>join</span><span style='color:#808030; '>(</span><span style='color:#800000; '>'</span><span style='color:#800000; '>'</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+          <span style='color:#800080; '>}</span>
+        <span style='color:#800080; '>}</span>
+      <span style='color:#800080; '>}</span>
+      <span style='color:#800000; font-weight:bold; '>return</span> <span style='color:#0f4d75; '>null</span><span style='color:#800080; '>;</span>
+    <span style='color:#800080; '>}</span><span style='color:#800080; '>;</span>
+    </pre>
+    <!--Created using ToHtml.com on 2018-12-10 16:33:04 UTC -->
+      <!--Created using ToHtml.com on 2018-12-09 16:45:20 UTC -->    
+      <a href="../index.html">List of solutions</a>
+    <a href="https://github.com/pawelrutkowski/adventofcode-2018">Github repo</a>
+</body>
+<script src="script.js"></script>
+</html>
