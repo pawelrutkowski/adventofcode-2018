@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/adventofcode-2018/precache-manifest.054451e0d68caec919ed1c9fd546c497.js"
+  "/adventofcode-2018/precache-manifest.44b62e5082c354601e33cb10eeab652b.js"
 );
 
 workbox.clientsClaim();
