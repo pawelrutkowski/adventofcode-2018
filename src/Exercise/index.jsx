@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
+
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { coy } from "react-syntax-highlighter/dist/styles/prism";
 
@@ -21,31 +23,34 @@ export class Exercise extends Component {
   };
 
   componentDidMount() {
+    const { dataPath } = this.props;
     const toText = r => r.text();
     const setDataState = data => {
       this.setState({ data });
     };
 
-    fetch(this.props.dataPath)
+    fetch(dataPath)
       .then(toText)
       .then(setDataState);
   }
 
   _handleOnCLick = () => {
     const { data } = this.state;
-    const { result, performance } = getPerformance(this.props.code, data);
+    const { code } = this.props;
+    const { result, performance } = getPerformance(code, data);
     this.setState({ result, performance });
   };
 
   render() {
     const { result, performance } = this.state;
+    const { name, codeText } = this.props;
 
     return (
       <div>
-        <p>Exercise {this.props.name}</p>
+        <p>Exercise {name}</p>
         <p>Code:</p>
         <SyntaxHighlighter language="javascript" style={coy}>
-          {this.props.codeText}
+          {codeText}
         </SyntaxHighlighter>
         <br />
         <button onClick={this._handleOnCLick}>run</button>
@@ -55,3 +60,10 @@ export class Exercise extends Component {
     );
   }
 }
+
+Exercise.propTypes = {
+  name: PropTypes.string,
+  code: PropTypes.func,
+  codeText: PropTypes.string,
+  dataPath: PropTypes.string
+};

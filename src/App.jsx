@@ -8,13 +8,13 @@ const Home = () => <div>Select day and check/run my solutions</div>;
 const MainMenu = () => {
   return (
     <div>
-      <Link to={"/"}>
+      <Link to="/">
         <button>Home</button>
       </Link>
-      <Link to={"/01"}>
+      <Link to="/01">
         <button>Day 01</button>
       </Link>
-      <Link to={"/02"}>
+      <Link to="/02">
         <button>Day 02</button>
       </Link>
     </div>
@@ -28,7 +28,12 @@ class App extends Component {
         <div>
           <header>
             <h1>Welcome to Advent of code 2018</h1>
-            <h2>solutions by pawelrutkowski</h2>
+            <h2>
+              solutions by:{" "}
+              <a href="https://github.com/pawelrutkowski/adventofcode-2018">
+                pawelrutkowski
+              </a>
+            </h2>
             <MainMenu />
           </header>
           <div>
