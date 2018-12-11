@@ -1,11 +1,11 @@
 import React from "react";
 import Day from "../Day";
 
-const part01 = (input, startValue = "0") => {
-  const regex = /(\r\n\t|\n|\r\t)/gm;
-  const emptyValue = "";
+const part01 = (input, startValue = 0) => {
+  const regex = /\n/gm;
+  const sum = (prev, element) => prev + Number(element);
 
-  return eval(startValue + input.replace(regex, emptyValue));
+  return input.split(regex).reduce(sum, startValue);
 };
 
 const part02 = (input1, startValue = 0) => {
@@ -40,12 +40,47 @@ const props = {
     {
       name: "01",
       dataPath: "./data/data01.txt",
-      code: part01
+      code: part01,
+      codeText: `
+const part01 = (input, startValue = 0) => {
+  const regex = /\\n/gm;
+  const sum = (prev, element) => prev + Number(element);
+
+  return input.split(regex).reduce(sum, startValue);
+};
+`
     },
     {
       name: "02",
       dataPath: "./data/data01.txt",
-      code: part02
+      code: part02,
+      codeText: `
+const part02 = (input1, startValue = 0) => {
+  const input = input1.split("\\n");
+  const sequences = [0];
+  let balance = startValue;
+  let isResult = true;
+  let result = null;
+
+  while (isResult) {
+    for (let index = 0; index < input.length; index++) {
+      const value = input[index];
+      if (value) {
+        balance += Number(value);
+        if (sequences.includes(balance)) {
+          isResult = false;
+          result = balance;
+          break;
+        } else {
+          sequences.push(balance);
+        }
+      }
+    }
+  }
+
+  return result;
+};
+`
     }
   ]
 };

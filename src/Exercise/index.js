@@ -45,7 +45,7 @@ export class Exercise extends Component {
         <p>Exercise {this.props.name}</p>
         <p>Code:</p>
         <SyntaxHighlighter language="javascript" style={coy}>
-          {this.props.code.toString()}
+          {this.props.codeText}
         </SyntaxHighlighter>
         <br />
         <button onClick={this._handleOnCLick}>run</button>
