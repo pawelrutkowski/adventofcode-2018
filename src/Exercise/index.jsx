@@ -43,19 +43,21 @@ export class Exercise extends Component {
 
   render() {
     const { result, performance } = this.state;
-    const { name, codeText } = this.props;
+    const { name, codeText, description } = this.props;
 
     return (
       <div>
-        <p>Exercise {name}</p>
-        <p>Code:</p>
+        <h2>Exercise {name}</h2>
+        <h3>Description:</h3>
+        <p>{description}</p>
+        <h3>Code:</h3>
         <SyntaxHighlighter language="javascript" style={coy}>
           {codeText}
         </SyntaxHighlighter>
         <br />
         <button onClick={this._handleOnCLick}>run</button>
-        <p>Results: {result}</p>
-        <p>Performance: {performance} milliseconds</p>
+        <h3>Results: {result}</h3>
+        <h3>Performance: {performance} milliseconds</h3>
       </div>
     );
   }
@@ -65,5 +67,6 @@ Exercise.propTypes = {
   name: PropTypes.string,
   code: PropTypes.func,
   codeText: PropTypes.string,
-  dataPath: PropTypes.string
+  dataPath: PropTypes.string,
+  description: PropTypes.string
 };

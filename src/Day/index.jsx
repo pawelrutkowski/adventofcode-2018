@@ -1,23 +1,33 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Exercise } from "../Exercise";
+import { Exercise } from '../Exercise'
+import PropTypes from 'prop-types'
+import React from 'react'
 
 export const Day = ({ day, exercises }) => {
-  const mapExercises = (props, index) => (
-    <Exercise key={`${index}`} {...props} />
-  );
-
+  const dayString = 'Day'
   return (
     <div>
-      <p>Day {day}</p>
-      {exercises.map(mapExercises)}
+      <p>
+        {dayString}
+        {' '}
+        {day}
+      </p>
+      {exercises.map((props, index) => (
+        <Exercise
+          key={props.name}
+          {...props}
+        />
+      ))}
     </div>
-  );
-};
+  )
+}
 
 Day.propTypes = {
-  day: PropTypes.string.isRequired,
-  exercises: PropTypes.arrayOf(PropTypes.shape({})).isRequired
+  'day': PropTypes.string.isRequired,
+  'exercises': PropTypes.arrayOf(PropTypes.shape({})).isRequired
+}
+
+Day.propTypes = {
+  name: PropTypes.string,
 };
 
-export default Day;
+export default Day

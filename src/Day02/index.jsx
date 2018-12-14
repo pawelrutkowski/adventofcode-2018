@@ -87,6 +87,28 @@ const props = {
   exercises: [
     {
       name: "01",
+      description: `
+1. If a character repeats a letter two or more times, write the result and calculate the result without repetition for each result
+3. Count how many repetitions you have
+4. Make the most of your recent results
+
+Example:
+1.
+"abcdef" = []
+"bababc" = [2,3]
+"abbcde" = [2]
+"abcccd" = [3]
+"aabcdd" = [2]
+"abcdee" = [2]
+"ababab" = [3]
+
+3.
+3 triples and 4 doubles
+4. 3 * 4 = 12
+
+Result:
+12
+      `,
       dataPath: "./data/data02.txt",
       code: part01,
       codeText: `
@@ -132,6 +154,7 @@ const part01 = input1 => {
     },
     {
       name: "02",
+      description: `Find two sets of words that differ only in one letter`,
       dataPath: "./data/data02.txt",
       code: part02,
       codeText: `

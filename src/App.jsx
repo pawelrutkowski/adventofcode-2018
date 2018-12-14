@@ -7,17 +7,23 @@ const Home = () => <div>Select day and check/run my solutions</div>;
 
 const MainMenu = () => {
   return (
-    <div>
-      <Link to="/">
-        <button>Home</button>
-      </Link>
-      <Link to="/01">
-        <button>Day 01</button>
-      </Link>
-      <Link to="/02">
-        <button>Day 02</button>
-      </Link>
-    </div>
+    <ul>
+      <li>
+        <Link to="/">
+          <button>Home</button>
+        </Link>
+      </li>
+      <li>
+        <Link to="/01">
+          <button>Day 01</button>
+        </Link>
+      </li>
+      <li>
+        <Link to="/02">
+          <button>Day 02</button>
+        </Link>
+      </li>
+    </ul>
   );
 };
 

@@ -39,6 +39,7 @@ const props = {
   exercises: [
     {
       name: "01",
+      description: 'Sum all values from input file',
       dataPath: "./data/data01.txt",
       code: part01,
       codeText: `
@@ -52,6 +53,7 @@ const part01 = (input, startValue = 0) => {
     },
     {
       name: "02",
+      description: 'Sum the numbers from input until you find a result that occurred twice. If you do not find such a result, continue adding from the beginning of the input data',
       dataPath: "./data/data01.txt",
       code: part02,
       codeText: `
